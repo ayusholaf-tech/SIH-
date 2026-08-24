@@ -24,9 +24,8 @@ export default function RiskDistributionChart({ onSelectZone, activeZone }) {
   }));
 
   const getBarColor = (severity) => {
-    if (severity === 'CRITICAL') return '#f43f5e';
-    if (severity === 'HIGH') return '#f59e0b';
-    if (severity === 'MODERATE') return '#eab308';
+    if (severity === 'HIGH' || severity === 'CRITICAL') return '#f43f5e';
+    if (severity === 'MEDIUM' || severity === 'MODERATE') return '#f59e0b';
     return '#10b981';
   };
 
@@ -38,9 +37,9 @@ export default function RiskDistributionChart({ onSelectZone, activeZone }) {
           <p className="font-bold text-white mb-1">{data.fullName}</p>
           <div className="space-y-1 font-mono text-[11px]">
             <p className="text-cyan-400">
-              Risk Score: <span className="font-bold text-white">{data.score}/100</span> ({data.severity})
+              Risk Score: <span className="font-bold text-white">{data.score}/100</span> [{data.severity}]
             </p>
-            <p className="text-rose-400">Vegetation Loss: {data.vegLoss}%</p>
+            <p className="text-rose-400">Canopy Loss: {data.vegLoss}%</p>
             <p className="text-blue-400">24h Rainfall: {data.rainfall} mm</p>
           </div>
         </div>
@@ -66,7 +65,7 @@ export default function RiskDistributionChart({ onSelectZone, activeZone }) {
           </div>
         </div>
         <span className="text-[10px] font-mono bg-slate-800/80 px-2 py-0.5 rounded text-slate-400 border border-slate-700">
-          RANKED BY SEVERITY
+          3-TIER CLASSIFICATION
         </span>
       </div>
 
@@ -119,9 +118,9 @@ export default function RiskDistributionChart({ onSelectZone, activeZone }) {
       <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
         <div className="flex items-center gap-1 text-[11px] text-cyan-400">
           <TrendingUp className="h-3.5 w-3.5" />
-          <span>Top Threat: Kedarnath Catchment (Score: 92)</span>
+          <span>Top Threat: Kedarnath Mandakini Basin (Score: 88)</span>
         </div>
-        <span className="text-[10px] text-slate-500">Click any bar to target sector</span>
+        <span className="text-[10px] text-slate-500">Click any bar to inspect sector</span>
       </div>
     </div>
   );

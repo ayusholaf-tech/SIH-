@@ -9,17 +9,15 @@ export default function RiskScoreGauge({ score, zoneName, severity }) {
   const strokeDashoffset = circumference - (score / 100) * circumference;
 
   const getColor = () => {
-    if (score >= 80) return '#f43f5e';
-    if (score >= 60) return '#f59e0b';
-    if (score >= 40) return '#eab308';
+    if (score >= 70) return '#f43f5e';
+    if (score >= 40) return '#f59e0b';
     return '#10b981';
   };
 
   const getThreatCategory = () => {
-    if (score >= 80) return 'GRADE-A CRITICAL HAZARD';
-    if (score >= 60) return 'GRADE-B HIGH VULNERABILITY';
-    if (score >= 40) return 'GRADE-C MODERATE CAUTION';
-    return 'GRADE-D NORMAL STABILITY';
+    if (score >= 70) return 'TIER-1 HIGH ENVIRONMENTAL RISK';
+    if (score >= 40) return 'TIER-2 MEDIUM ENVIRONMENTAL RISK';
+    return 'TIER-3 LOW ENVIRONMENTAL RISK';
   };
 
   return (

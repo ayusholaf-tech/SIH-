@@ -67,10 +67,13 @@ export default function AlertsView({
         <div className="flex items-center gap-2 font-mono text-xs">
           <span className="bg-rose-950/80 border border-rose-500/40 text-rose-400 px-2.5 py-1 rounded-xl font-bold flex items-center gap-1.5">
             <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse" />
-            {criticalCount} CRITICAL
+            {alerts.filter(a => a.severity === 'HIGH').length} HIGH
           </span>
           <span className="bg-amber-950/80 border border-amber-500/40 text-amber-400 px-2.5 py-1 rounded-xl font-bold">
-            {highCount} HIGH
+            {alerts.filter(a => a.severity === 'MEDIUM').length} MEDIUM
+          </span>
+          <span className="bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 px-2.5 py-1 rounded-xl font-bold">
+            {alerts.filter(a => a.severity === 'LOW').length} LOW
           </span>
         </div>
       </div>
@@ -93,15 +96,15 @@ export default function AlertsView({
         <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
           {/* Severity Pills */}
           <div className="bg-slate-950 border border-slate-800 p-1 rounded-xl flex items-center gap-1 text-xs font-mono">
-            {['ALL', 'CRITICAL', 'HIGH', 'MODERATE'].map(sev => (
+            {['ALL', 'HIGH', 'MEDIUM', 'LOW'].map(sev => (
               <button
                 key={sev}
                 onClick={() => setSeverityFilter(sev)}
                 className={`px-2.5 py-1 rounded-lg transition-colors ${
                   severityFilter === sev
-                    ? sev === 'CRITICAL' ? 'bg-rose-600 text-white font-bold'
-                    : sev === 'HIGH' ? 'bg-amber-600 text-white font-bold'
-                    : sev === 'MODERATE' ? 'bg-yellow-600 text-white font-bold'
+                    ? sev === 'HIGH' ? 'bg-rose-600 text-white font-bold'
+                    : sev === 'MEDIUM' ? 'bg-amber-600 text-white font-bold'
+                    : sev === 'LOW' ? 'bg-emerald-600 text-white font-bold'
                     : 'bg-cyan-600 text-white font-bold'
                     : 'text-slate-400 hover:text-white'
                 }`}

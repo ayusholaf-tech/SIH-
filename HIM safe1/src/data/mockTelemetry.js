@@ -1,0 +1,102 @@
+/**
+ * Telemetry and Alert Logs for HIM-SAFE (3-Tier Risk Standard: LOW / MEDIUM / HIGH)
+ */
+
+export const INITIAL_ALERTS = [
+  {
+    id: "ALT-2026-0941",
+    timestamp: "10 mins ago",
+    dateFormatted: "2026-05-19 14:35 IST",
+    zoneId: "zone-kedarnath",
+    location: "Kedarnath Mandakini Basin",
+    coordinates: "30.7346° N, 79.0669° E",
+    state: "Uttarakhand",
+    severity: "HIGH",
+    riskScore: 88,
+    detectedChange: "Chorabari moraine lake volume surge (+34%) & upper gully debris mobilization",
+    recommendedAction: "Suggested Level-3 flash flood alert across Gaurikund-Sonprayag corridor; review acoustic sensor sirens along the Mandakini river channel.",
+    authorityAssigned: "Uttarakhand SDMA (Simulated)",
+    status: "PENDING_ACK",
+    sensorSource: "Sentinel-2 / Landsat Compatible Optical RGB"
+  },
+  {
+    id: "ALT-2026-0935",
+    timestamp: "28 mins ago",
+    dateFormatted: "2026-05-19 14:15 IST",
+    zoneId: "zone-badrinath",
+    location: "Badrinath Highway Corridor",
+    coordinates: "30.7433° N, 79.4938° E",
+    state: "Uttarakhand",
+    severity: "HIGH",
+    riskScore: 76,
+    detectedChange: "Linear slope excavation along NH-07 bypass with loose bedrock scarp sliding toward Alaknanda river",
+    recommendedAction: "Enforce slope retaining mesh along NH-07 cut section; clear downstream drainage culverts.",
+    authorityAssigned: "Border Roads Organisation (BRO)",
+    status: "PENDING_ACK",
+    sensorSource: "Sentinel-2 / Landsat Compatible Optical RGB"
+  },
+  {
+    id: "ALT-2026-0932",
+    timestamp: "1 hr ago",
+    dateFormatted: "2026-05-19 13:40 IST",
+    zoneId: "zone-joshimath",
+    location: "Joshimath Subsidence Corridor",
+    coordinates: "30.5562° N, 79.5637° E",
+    state: "Uttarakhand",
+    severity: "HIGH",
+    riskScore: 82,
+    detectedChange: "Rapid sub-surface displacement in Ward 5 & vegetative canopy loss of 42%",
+    recommendedAction: "Suggested Grade-A evacuation review for Wards 4, 6, and 7; pause heavy drilling on Helang bypass.",
+    authorityAssigned: "Chamoli District DDMA (Simulated)",
+    status: "ACKNOWLEDGED",
+    sensorSource: "Sentinel-2 / Landsat Compatible Optical RGB"
+  },
+  {
+    id: "ALT-2026-0919",
+    timestamp: "5 hrs ago",
+    dateFormatted: "2026-05-19 09:12 IST",
+    zoneId: "zone-chamoli",
+    location: "Chamoli - Rishiganga Gash Basin",
+    coordinates: "30.4124° N, 79.3326° E",
+    state: "Uttarakhand",
+    severity: "HIGH",
+    riskScore: 72,
+    detectedChange: "Active rock scarp progression and 11.2 km road-widening excavation debris overloading riverbanks",
+    recommendedAction: "Pre-position excavators at bridge bottlenecks; review night transit advisories along Joshimath-Malari road.",
+    authorityAssigned: "Regional Taskforce (Simulated)",
+    status: "ACKNOWLEDGED",
+    sensorSource: "Sentinel-2 / Landsat Compatible Optical RGB"
+  },
+  {
+    id: "ALT-2026-0912",
+    timestamp: "8 hrs ago",
+    dateFormatted: "2026-05-19 06:45 IST",
+    zoneId: "zone-dharamshala",
+    location: "Dharamshala - McLeod Ganj Ridge Sector",
+    coordinates: "32.2190° N, 76.3234° E",
+    state: "Himachal Pradesh",
+    severity: "MEDIUM",
+    riskScore: 58,
+    detectedChange: "Hill-cutting overburden and unchanneled stormwater saturation near Bhagsu cliffline",
+    recommendedAction: "Advise strict controls on hill-slope excavations exceeding 4 meters without retaining walls; clear drainage gullies before monsoon surge.",
+    authorityAssigned: "Kangra District Administration (Simulated)",
+    status: "RESOLVED",
+    sensorSource: "Sentinel-2 / Landsat Compatible Optical RGB"
+  },
+  {
+    id: "ALT-2026-0899",
+    timestamp: "1 day ago",
+    dateFormatted: "2026-05-18 11:20 IST",
+    zoneId: "zone-spiti",
+    location: "Spiti Valley High-Altitude Permafrost Zone",
+    coordinates: "32.2461° N, 78.0349° E",
+    state: "Himachal Pradesh",
+    severity: "LOW",
+    riskScore: 28,
+    detectedChange: "Localized pasture topsoil disturbance from off-road vehicle tracks near Kaza",
+    recommendedAction: "Demarcate eco-sensitive pasture buffer rings around Kaza & Tabo.",
+    authorityAssigned: "Lahaul-Spiti Forest Division (Simulated)",
+    status: "RESOLVED",
+    sensorSource: "Sentinel-2 / Landsat Compatible Optical RGB"
+  }
+];

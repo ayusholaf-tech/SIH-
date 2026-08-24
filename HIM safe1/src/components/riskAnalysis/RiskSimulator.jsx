@@ -45,9 +45,8 @@ export default function RiskSimulator({ zone, onSimulateAction }) {
   const simulatedScore = calculateRiskScore();
 
   const getSimulatedSeverity = (score) => {
-    if (score >= 80) return 'CRITICAL';
-    if (score >= 60) return 'HIGH';
-    if (score >= 40) return 'MODERATE';
+    if (score >= 70) return 'HIGH';
+    if (score >= 40) return 'MEDIUM';
     return 'LOW';
   };
 

@@ -1,19 +1,29 @@
 import React from 'react';
-import { Layers, Eye, EyeOff, TreePine, AlertTriangle, Route, Activity } from 'lucide-react';
+import { Layers, Eye, EyeOff, TreePine, AlertTriangle, Sparkles } from 'lucide-react';
 
 export default function LayerControls({
   showVegLossLayer,
   setShowVegLossLayer,
   showLandDisturbanceLayer,
   setShowLandDisturbanceLayer,
-  showRoadDetectionLayer,
-  setShowRoadDetectionLayer
+  showCompositeOverlay,
+  setShowCompositeOverlay
 }) {
   const layers = [
     {
+      id: 'composite',
+      name: 'Composite Change Overlay',
+      description: 'Combined dual-channel mask: Canopy loss (crimson) & soil excavation (amber)',
+      active: showCompositeOverlay,
+      toggle: () => setShowCompositeOverlay(!showCompositeOverlay),
+      color: 'border-cyan-500/40 bg-cyan-500/10 text-cyan-400',
+      activeBadge: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
+      icon: Sparkles
+    },
+    {
       id: 'veg',
-      name: 'Vegetation Loss (NDVI)',
-      description: 'Infrared reflectance canopy reduction heat signature',
+      name: 'Vegetation Loss (VARI Proxy)',
+      description: 'RGB Visible Atmospherically Resistant Index loss (Canopy thinning heatmap)',
       active: showVegLossLayer,
       toggle: () => setShowVegLossLayer(!showVegLossLayer),
       color: 'border-rose-500/40 bg-rose-500/10 text-rose-400',
@@ -22,23 +32,13 @@ export default function LayerControls({
     },
     {
       id: 'disturb',
-      name: 'Land Disturbance Mask',
-      description: 'Exposed regolith, tension cracks, and scarp slip polygons',
+      name: 'Land Disturbance & Soil Exposure',
+      description: 'Exposed regolith, scarp failure zones, and linear road cut vectors',
       active: showLandDisturbanceLayer,
       toggle: () => setShowLandDisturbanceLayer(!showLandDisturbanceLayer),
       color: 'border-amber-500/40 bg-amber-500/10 text-amber-400',
       activeBadge: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
       icon: AlertTriangle
-    },
-    {
-      id: 'road',
-      name: 'New Road / Trail Detection',
-      description: 'Automated deep linear infrastructure slope cut extraction',
-      active: showRoadDetectionLayer,
-      toggle: () => setShowRoadDetectionLayer(!showRoadDetectionLayer),
-      color: 'border-cyan-500/40 bg-cyan-500/10 text-cyan-400',
-      activeBadge: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
-      icon: Route
     }
   ];
 
@@ -51,10 +51,10 @@ export default function LayerControls({
           </div>
           <div>
             <h3 className="text-sm font-bold text-white font-display">
-              Multispectral Layer Overlays
+              Change Layer Overlays
             </h3>
             <p className="text-[11px] text-slate-400 font-mono">
-              Toggle satellite spectral anomaly overlays on telemetry
+              Toggle computer vision masks onto satellite split comparison
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function LayerControls({
                       {layer.name}
                     </span>
                     <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded border font-semibold ${layer.activeBadge}`}>
-                      {layer.active ? 'ACTIVE LAYER' : 'OFF'}
+                      {layer.active ? 'ACTIVE' : 'HIDDEN'}
                     </span>
                   </div>
                   <p className="text-[11px] text-slate-400 mt-0.5">

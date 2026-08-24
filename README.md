@@ -1,74 +1,76 @@
-# HIM-SAFE: Himalayan Environmental Impact Monitoring Command Center
+# HIM-SAFE: Himalayan Environmental Impact Monitoring
+### Smart India Hackathon (SIH 2026) Prototype — Local Working MVP
 
-![Status](https://img.shields.io/badge/Status-Operational%20Prototype-06b6d4)
-![Theme](https://img.shields.io/badge/Design-Tactical%20Environmental%20Command-10b981)
-![Stack](https://img.shields.io/badge/Stack-React%20%7C%20Vite%20%7C%20Tailwind%20%7C%20Leaflet%20%7C%20Recharts-38bdf8)
-
-**HIM-SAFE** is a geospatial environmental monitoring and early-warning command center prototype engineered for government authorities (NDMA, MoEFCC, State Disaster Management Authorities of Uttarakhand, Himachal Pradesh, Sikkim, and Ladakh) to track ecological degradation, deforestation, land disturbances, road cutting excavations, and landslide/GLOF hazards across the Indian Himalayan Region (IHR).
+**HIM-SAFE** is an explainable, computer-vision powered environmental risk monitoring system designed for fragile Himalayan slope corridors (*Kedarnath, Badrinath, Joshimath, Chamoli, Dharamshala, Spiti*). It performs temporal satellite image alignment, RGB vegetation proxy analysis, physical soil change detection, transparent formulaic 0–100 risk scoring with a 3-tier classification, interactive Leaflet GIS mapping, and automated field inspection action plan generation.
 
 ---
 
-## Key Modules & Capabilities
+## 🚀 Key Features
 
-### 1. Command Dashboard
-- **Spatial Telemetry Overview**: Real-time KPI summaries covering Monitored Zones, Total Detected Land Disturbance (sq km), High-Risk Zones, and Average Regional Vulnerability Index.
-- **Interactive Himalayan Map**: Leaflet & OpenStreetMap powered GIS grid with risk-level colored circular zones, threat markers, and interactive telemetry popups across Himalayan hotspots (Joshimath, Kedarnath, Chamoli, Dharamshala, Spiti, Gangotri, Teesta, Leh).
-- **Regional Risk Distribution Spectrum**: Ranked bar charts visualizing comparative risk metrics.
-- **Real-Time Incident Stream**: Ticker feed displaying active alerts triggered by satellite anomalies.
-
-### 2. Satellite Monitoring & Change Detection
-- **Himalayan Location Selector**: Seamless switching between vulnerable Himalayan catchment sectors.
-- **Interactive Before vs After Satellite Comparator**: Split-screen draggable slider comparing pre-disturbance baseline imagery against current satellite passes.
-- **Multispectral Dynamic Overlays**:
-  - *Vegetation Loss (NDVI)*: Infrared canopy thinning heat signatures.
-  - *Land Disturbance Mask*: Soil exposure, rockfall scars, and active tension fissures.
-  - *New Road / Trail Detection*: Deep linear infrastructure slope cut extraction vectors.
-- **Biophysical Telemetry**: Quantitative change indices including displacement velocity (mm/day), erosion volume (m³), and slope gradients.
-
-### 3. Multi-Factor Risk Analysis & Live Simulator
-- **0–100 Composite Vulnerability Gauge**: Weighted multi-criteria evaluation (MCE) reflecting compound ecological risks.
-- **5-Factor Radar Matrix**: Multi-dimensional breakdown of Vegetation Loss (25%), Land Disturbance Index (25%), Slope Gradient (20%), 24h Precipitation (15%), and Thermal Anomalies (15%).
-- **Interactive "What-If" Hazard Simulator (Sandbox)**: Allows authorities to dynamically test extreme scenarios (e.g. cloudburst rainfall surges, excessive hill-cutting) with live recalculated risk scores and automated emergency mitigation advisories.
-- **6-Month Historical Climatic Trendline**: Correlation between seasonal monsoon precipitation surges and escalating slope destabilization.
-
-### 4. Incident Alerts & Authority Response
-- Filterable registry of active environmental alerts classified by severity (CRITICAL, HIGH, MODERATE).
-- Searchable by sector, hazard, or coordinates.
-- **Incident Response Console**: Interactive acknowledgment workflows and simulated SDRF / NDRF taskforce dispatch actions.
-
-### 5. Official Intelligence Dossier Generator
-- Synthesizes comprehensive government-grade environmental impact reports.
-- Includes official letterheads, classified document serial numbers, quantitative indicator tables, and prioritized administrative action roadmaps.
-- Built-in **Print / Save as PDF** functionality.
+1. **Dual Satellite Image Ingestion & OpenCV Alignment**:
+   - Accepts temporal Before & After satellite captures.
+   - Robust spatial registration using **ORB Keypoint Feature Matching + RANSAC Homography warping**.
+2. **RGB Visible Vegetation Index (VARI Proxy)**:
+   - Evaluates canopy loss and slope clearing using the formula:
+     $$\text{VARI} = \frac{\text{Green} - \text{Red}}{\text{Green} + \text{Red} - \text{Blue}}$$
+   - *SIH Transparency Note*: Explicitly labeled in the UI as an **RGB proxy**, not true satellite NDVI. True NDVI requires Sentinel-2 NIR band 8, targeted for the production roadmap.
+3. **Land Change & Disturbance Segmentation**:
+   - Differencing + bilateral filtering + morphological opening/closing to isolate real slope scarp failures, road-widening excavation scars, and river siltation.
+4. **Transparent Risk Scoring Engine (0–100)**:
+   - 100% deterministic and auditable math:
+     $$\text{Risk Score} = (0.45 \times \text{Veg Loss}) + (0.35 \times \text{Land Change}) + (0.20 \times \text{Disturbance})$$
+5. **Standardized 3-Tier Severity Classification**:
+   - 🟢 **LOW RISK (0 – 39)**: Terrain conditions within baseline tolerance.
+   - 🟡 **MEDIUM RISK (40 – 69)**: Moderate slope disturbance; scheduled inspection recommended.
+   - 🔴 **HIGH RISK (70 – 100)**: Severe slope failure hazard; urgent field intervention required.
+6. **Interactive Leaflet GIS Mapping**:
+   - Real Himalayan sector overlays, geofence vulnerability buffers, and OSM / Dark HUD tile modes.
+7. **Actionable Field Inspection Checklist**:
+   - Automated priority recommendations dispatched to responsible authorities (SDMA, BRO, Forest Dept).
 
 ---
 
-## Tech Stack
-- **Framework**: React 18 + Vite
-- **Styling**: Tailwind CSS (Custom command center dark HUD aesthetic, glassmorphism, glowing telemetry accents)
-- **Mapping & GIS**: Leaflet + React-Leaflet + OpenStreetMap & CartoDB Dark Matter
-- **Charts & Data Visualization**: Recharts (Radar, Area, Bar charts)
-- **Icons**: Lucide React
+## 🛠 Technology Stack
+
+- **Frontend**: React + Vite, Tailwind CSS, Lucide Icons, Leaflet / React-Leaflet, Recharts.
+- **Backend**: Python 3.12+, FastAPI, Uvicorn.
+- **Image Processing & CV**: OpenCV (`opencv-python-headless`), NumPy, Pillow.
+- **GIS**: Leaflet + OpenStreetMap / CARTO Basemaps.
 
 ---
 
-## Local Development Setup
+## 💻 How to Run on Windows
 
-```bash
-# Clone the repository
-git clone https://github.com/ayusholaf-tech/SIH-.git
-cd SIH-
+### Option A: 1-Click Launch (Recommended)
+Double-click `run_all.bat` from the project root. This opens both the FastAPI backend and the Vite frontend simultaneously in separate command windows.
 
-# Install dependencies
-npm install
+### Option B: Manual Terminal Startup
 
-# Start local development server
-npm run dev
-
-# Build for production
-npm run build
+**1. Start the Backend:**
+```powershell
+cd backend
+uv venv .venv
+uv pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
+- API Base URL: `http://127.0.0.1:8000`
+- Interactive Swagger API Docs: `http://127.0.0.1:8000/docs`
+
+**2. Start the Frontend:**
+```powershell
+cd "HIM safe1"
+npm install
+npm run dev
+```
+- Frontend Web App: `http://localhost:5173`
 
 ---
 
-*Note: All satellite feeds, IMD precipitation data, and telemetry logs in this version are realistic fictional prototype demonstration datasets created for SIH 2026 evaluation.*
+## 📡 API Endpoints
+
+- `GET /`: API overview and calculation weights.
+- `GET /api/health`: Health check and OpenCV version.
+- `GET /api/zones`: List of Himalayan sectors (*Kedarnath, Badrinath, Joshimath, Chamoli, Dharamshala, Spiti*).
+- `GET /api/sample-scenarios`: 1-click test scenarios for instant live demo.
+- `GET /api/sample-images/{scenario}`: Pre-bundled Before/After satellite base64 pairs.
+- `POST /api/analyze`: Multipart upload receiving `before_image` and `after_image`. Returns base64 overlays, alignment metrics, explainable formula breakdown, and field recommendations.
