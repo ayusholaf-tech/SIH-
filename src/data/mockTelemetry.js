@@ -14,10 +14,10 @@ export const INITIAL_ALERTS = [
     severity: "CRITICAL",
     riskScore: 92,
     detectedChange: "Chorabari moraine lake volume surge (+34%) & upper gully debris mobilization",
-    recommendedAction: "Trigger Level-3 flash flood alert across Gaurikund-Sonprayag corridor; mandate automated acoustic sensor sirens along the Mandakini river channel.",
-    authorityAssigned: "NDMA / Uttarakhand SDMA",
+    recommendedAction: "Suggested Level-3 flash flood alert across Gaurikund-Sonprayag corridor; review acoustic sensor sirens along the Mandakini river channel.",
+    authorityAssigned: "Uttarakhand SDMA (Simulated)",
     status: "PENDING_ACK",
-    sensorSource: "Sentinel-1 SAR / Sentinel-2 MSI"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   },
   {
     id: "ALT-2026-0938",
@@ -30,10 +30,10 @@ export const INITIAL_ALERTS = [
     severity: "CRITICAL",
     riskScore: 89,
     detectedChange: "South Lhonak moraine ridge micro-fissure expansion (5.8 mm/day displacement rate)",
-    recommendedAction: "Alert downstream hydro-electric barrage authorities; execute automated spillway gate readiness drills.",
-    authorityAssigned: "Sikkim SDMA & Central Water Commission",
+    recommendedAction: "Alert downstream hydro-electric barrage authorities; execute spillway gate readiness reviews.",
+    authorityAssigned: "Sikkim SDMA (Simulated)",
     status: "IN_PROGRESS",
-    sensorSource: "RISAT-1A SAR + Sentinel-2"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   },
   {
     id: "ALT-2026-0932",
@@ -46,10 +46,10 @@ export const INITIAL_ALERTS = [
     severity: "CRITICAL",
     riskScore: 88,
     detectedChange: "Rapid sub-surface displacement in Ward 5 & vegetative canopy loss of 42%",
-    recommendedAction: "Issue immediate Grade-A evacuation notice for Wards 4, 6, and 7; halt all heavy drilling on the Helang bypass corridor.",
-    authorityAssigned: "Chamoli District Disaster Mgmt Authority",
+    recommendedAction: "Suggested Grade-A evacuation review for Wards 4, 6, and 7; pause heavy drilling on the Helang bypass corridor.",
+    authorityAssigned: "Chamoli District DDMA (Simulated)",
     status: "ACKNOWLEDGED",
-    sensorSource: "InSAR Ground Telemetry"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   },
   {
     id: "ALT-2026-0925",
@@ -62,10 +62,10 @@ export const INITIAL_ALERTS = [
     severity: "CRITICAL",
     riskScore: 84,
     detectedChange: "Gaumukh snout calving acceleration + lateral moraine slip over pilgrimage trail",
-    recommendedAction: "Limit daily Gaumukh trekking permits to 75; deploy real-time acoustic avalanche sensors near Chirbasa cliff.",
-    authorityAssigned: "Uttarkashi Administration / IIRS Dehradun",
+    recommendedAction: "Suggest permit quota limits for Gaumukh trekking; review acoustic sensor monitors near Chirbasa cliff.",
+    authorityAssigned: "Uttarkashi Administration (Simulated)",
     status: "ACKNOWLEDGED",
-    sensorSource: "Landsat-9 OLI-2"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   },
   {
     id: "ALT-2026-0919",
@@ -78,10 +78,10 @@ export const INITIAL_ALERTS = [
     severity: "HIGH",
     riskScore: 76,
     detectedChange: "Active rock scarp progression and 11.2 km road-widening excavation debris overloading riverbanks",
-    recommendedAction: "Pre-position excavators at bridge bottlenecks; restrict night transit along Joshimath-Malari strategic road.",
-    authorityAssigned: "Border Roads Organisation & SDRF",
+    recommendedAction: "Pre-position excavators at bridge bottlenecks; review night transit advisories along Joshimath-Malari road.",
+    authorityAssigned: "Regional Taskforce (Simulated)",
     status: "ACKNOWLEDGED",
-    sensorSource: "Sentinel-2 MSI"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   },
   {
     id: "ALT-2026-0912",
@@ -94,10 +94,10 @@ export const INITIAL_ALERTS = [
     severity: "HIGH",
     riskScore: 68,
     detectedChange: "Hill-cutting overburden and unchanneled stormwater saturation near Bhagsu cliffline",
-    recommendedAction: "Enforce blanket ban on hill-slope excavations exceeding 4 meters without RCC retaining walls; clear drainage gullies before monsoon surge.",
-    authorityAssigned: "Kangra District Administration",
+    recommendedAction: "Advise strict controls on hill-slope excavations exceeding 4 meters without retaining walls; clear drainage gullies before monsoon surge.",
+    authorityAssigned: "Kangra District Administration (Simulated)",
     status: "RESOLVED",
-    sensorSource: "Sentinel-2 MSI"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   },
   {
     id: "ALT-2026-0899",
@@ -110,10 +110,10 @@ export const INITIAL_ALERTS = [
     severity: "HIGH",
     riskScore: 64,
     detectedChange: "Runoff channel siltation and infrastructure encroachment across Khakshal alluvial fan",
-    recommendedAction: "Clear choked culverts on Saboo & Choglamsar drainage paths; prohibit permanent masonry on active alluvial wash corridors.",
-    authorityAssigned: "Ladakh Disaster Management Authority",
+    recommendedAction: "Clear choked culverts on Saboo & Choglamsar drainage paths; suggest restriction on permanent masonry on active wash corridors.",
+    authorityAssigned: "Ladakh SDMA (Simulated)",
     status: "ACKNOWLEDGED",
-    sensorSource: "Landsat-9 OLI-2"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   },
   {
     id: "ALT-2026-0881",
@@ -127,15 +127,14 @@ export const INITIAL_ALERTS = [
     riskScore: 44,
     detectedChange: "Vegetation cover thinning across 1.2 sq km fragile alpine grassland due to off-road tracks",
     recommendedAction: "Designate protected alpine conservation corridors; ban non-designated off-road vehicular excursions.",
-    authorityAssigned: "HP Forest Dept / Kaza Sub-Divisional Magistrate",
+    authorityAssigned: "HP Forest Dept (Simulated)",
     status: "ACKNOWLEDGED",
-    sensorSource: "Landsat-9 OLI-2"
+    sensorSource: "Demo Sentinel/Landsat-compatible imagery"
   }
 ];
 
 export const SATELLITE_ORBIT_DATA = [
-  { name: "Sentinel-2A MSI", orbit: "Sun-synchronous 786 km", swath: "290 km", nextPass: "In 44 mins", sensorHealth: "100% OPERATIONAL" },
-  { name: "Sentinel-1C SAR", orbit: "Polar 693 km", swath: "250 km (C-Band)", nextPass: "In 2 hrs 18m", sensorHealth: "OPTIMAL" },
-  { name: "Landsat-9 OLI-2/TIRS", orbit: "Sun-synchronous 705 km", swath: "185 km", nextPass: "In 4 hrs 05m", sensorHealth: "100% OPERATIONAL" },
-  { name: "ISRO EOS-04 (RISAT-1A)", orbit: "Sun-synchronous 536 km", swath: "C-band Polarimetric", nextPass: "In 1 hr 12m", sensorHealth: "ACTIVE" }
+  { name: "Demo Sentinel-2A Mode", orbit: "Simulated 786 km", swath: "290 km", nextPass: "In 44 mins", sensorHealth: "SIMULATED DATASET" },
+  { name: "Demo SAR Mode", orbit: "Simulated 693 km", swath: "250 km (C-Band)", nextPass: "In 2 hrs 18m", sensorHealth: "SIMULATED DATASET" },
+  { name: "Demo Landsat-9 Mode", orbit: "Simulated 705 km", swath: "185 km", nextPass: "In 4 hrs 05m", sensorHealth: "SIMULATED DATASET" }
 ];

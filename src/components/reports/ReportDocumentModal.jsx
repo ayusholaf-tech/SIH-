@@ -28,7 +28,7 @@ export default function ReportDocumentModal({ zone, onClose }) {
           <div className="flex items-center gap-2">
             <FileText className="h-5 w-5 text-cyan-400" />
             <span className="font-mono text-xs font-bold text-white uppercase">
-              Official Environmental Intelligence Dossier
+              Demo Environmental Monitoring Report
             </span>
           </div>
 
@@ -59,22 +59,22 @@ export default function ReportDocumentModal({ zone, onClose }) {
               </div>
               <div>
                 <div className="text-[11px] font-mono uppercase tracking-widest text-cyan-400 font-bold">
-                  NATIONAL DISASTER MANAGEMENT & ECOLOGICAL MONITORING CELL
+                  HIMALAYAN ECOLOGICAL IMPACT MONITORING DEMO (SIH 2026)
                 </div>
                 <h1 className="text-xl font-extrabold text-white font-display uppercase tracking-tight">
-                  HIM-SAFE Geospatial Assessment Report
+                  HIM-SAFE Geospatial Assessment Report (Demo)
                 </h1>
                 <p className="text-xs text-slate-400 font-mono">
-                  Integrated Himalayan Environmental Impact & Landslide Hazard Dossier
+                  Simulated Environmental Impact & Landslide Hazard Analysis
                 </p>
               </div>
             </div>
 
             <div className="text-right font-mono text-xs space-y-1">
-              <div className="text-slate-400">DOC REF: <strong className="text-white font-bold">HIM-2026/SEC-084</strong></div>
-              <div className="text-slate-400">ISSUED: <strong className="text-cyan-300">19 MAY 2026</strong></div>
+              <div className="text-slate-400">DOC REF: <strong className="text-white font-bold">HIM-2026/DEMO-084</strong></div>
+              <div className="text-slate-400">DATE: <strong className="text-cyan-300">19 MAY 2026</strong></div>
               <div className="text-[10px] bg-rose-950/80 border border-rose-500/40 text-rose-400 px-2 py-0.5 rounded font-bold uppercase inline-block">
-                CLASSIFICATION: RESTRICTED OFFICIAL
+                CLASSIFICATION: PROTOTYPE DEMO ONLY
               </div>
             </div>
           </div>
@@ -103,10 +103,10 @@ export default function ReportDocumentModal({ zone, onClose }) {
           <div className="space-y-2">
             <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2">
               <BadgeCheck className="h-4 w-4" />
-              1.0 Executive Synthesis & Anomaly Detection
+              1.0 Summary & Anomaly Analysis (Simulated)
             </h3>
             <p className="text-xs text-slate-300 leading-relaxed bg-slate-900/50 p-4 rounded-xl border border-slate-800/80">
-              {zone.summary} High-resolution multispectral differential analytics between baseline scan (<strong>{zone.beforeAfterData.baselineDate}</strong>) and latest satellite telemetry (<strong>{zone.beforeAfterData.telemetryDate}</strong>) confirm active micro-fissuring, accelerated toe erosion, and severe vegetative canopy depletion across vulnerable catchments.
+              {zone.summary} High-resolution multispectral differential analytics between baseline scan (<strong>{zone.beforeAfterData.baselineDate}</strong>) and latest simulated telemetry (<strong>{zone.beforeAfterData.telemetryDate}</strong>) demonstrate active micro-fissuring, accelerated toe erosion, and severe vegetative canopy depletion across vulnerable catchments in this scenario.
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export default function ReportDocumentModal({ zone, onClose }) {
           <div className="space-y-2">
             <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2">
               <BadgeCheck className="h-4 w-4" />
-              2.0 Quantitative Environmental Stress Matrix
+              2.0 Quantitative Stress Matrix (Simulated)
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
               <div className="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
@@ -144,11 +144,11 @@ export default function ReportDocumentModal({ zone, onClose }) {
           <div className="space-y-2">
             <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2">
               <BadgeCheck className="h-4 w-4" />
-              3.0 Authority Directives & Priority Mitigation Roadmap
+              3.0 Suggested Mitigation & Action Roadmap
             </h3>
             
             <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-500/40 text-xs mb-3">
-              <span className="font-bold text-cyan-300 font-mono block mb-1">IMMEDIATE ADMINISTRATIVE MANDATE:</span>
+              <span className="font-bold text-cyan-300 font-mono block mb-1">SUGGESTED RESPONSE STRATEGY:</span>
               <p className="text-slate-200 leading-relaxed">{zone.recommendedAction}</p>
             </div>
 
@@ -173,26 +173,26 @@ export default function ReportDocumentModal({ zone, onClose }) {
           <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between text-xs font-mono text-slate-400 gap-4">
             <div>
               <div className="h-10 w-36 border-b border-slate-700 mb-1 flex items-end">
-                <span className="text-[11px] font-display text-cyan-400 font-semibold italic">Dr. K. Sharma, NDMA</span>
+                <span className="text-[11px] font-display text-cyan-400 font-semibold italic">SIH 2026 Evaluator</span>
               </div>
-              <span className="text-[10px]">DIRECTOR GENERAL (GEOSPATIAL AUDIT)</span>
+              <span className="text-[10px]">PROJECT EVALUATION LEAD (DEMO)</span>
             </div>
 
             <div className="text-right">
-              <div className="text-[10px] text-slate-500">DIGITAL HASH: SHA256: 7f89c4...e81a</div>
-              <div className="text-emerald-400 text-[11px] font-bold">VERIFIED BY HIM-SAFE COMMAND NODE</div>
+              <div className="text-[10px] text-slate-500">DEMO VERIFICATION HASH: 7f89c4...e81a</div>
+              <div className="text-emerald-400 text-[11px] font-bold">GENERATED BY HIM-SAFE PROTOTYPE ENGINE</div>
             </div>
           </div>
         </div>
 
         {/* Modal Bottom Actions */}
         <div className="no-print bg-slate-950 border-t border-slate-800 px-6 py-3.5 flex items-center justify-between text-xs font-mono">
-          <span className="text-slate-500">PROTOTYPE DEMONSTRATOR GENERATOR</span>
+          <span className="text-slate-500">PROTOTYPE DEMO GENERATOR</span>
           <button
             onClick={onClose}
             className="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-semibold transition-colors"
           >
-            Close Dossier
+            Close Report
           </button>
         </div>
       </div>

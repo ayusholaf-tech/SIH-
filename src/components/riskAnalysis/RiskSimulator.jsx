@@ -63,15 +63,15 @@ export default function RiskSimulator({ zone, onSimulateAction }) {
 
   const getSimulatedAdvisory = () => {
     if (simulatedScore >= 85) {
-      return "CODE RED: Immediate mass evacuation directive required. Severe debris avalanche and slope liquefaction imminent.";
+      return "CODE RED: High-risk scenario simulation. Severe debris avalanche and slope liquefaction indicated in model.";
     }
     if (simulatedScore >= 70) {
-      return "CODE AMBER: Restrict hill-highway transit; stage emergency excavators and sound catchment warning sirens.";
+      return "CODE AMBER: Elevated risk simulation. Precautionary review and slope inspection indicated.";
     }
     if (simulatedScore >= 50) {
-      return "CODE YELLOW: Deploy localized civil defense inspection; clear cross-drainage culverts along vulnerable slopes.";
+      return "CODE YELLOW: Moderate risk simulation. Routine drainage maintenance recommended.";
     }
-    return "CODE GREEN: Sector within baseline ecological resilience tolerance. Maintain routine orbital monitoring.";
+    return "CODE GREEN: Sector within simulated baseline tolerance.";
   };
 
   return (
@@ -85,11 +85,11 @@ export default function RiskSimulator({ zone, onSimulateAction }) {
             <h3 className="text-sm font-bold text-white font-display flex items-center gap-2">
               Interactive "What-If" Hazard Simulator
               <span className="bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[9px] font-mono px-1.5 py-0.2 rounded uppercase">
-                LIVE COMPUTATION
+                SIMULATED COMPUTATION
               </span>
             </h3>
             <p className="text-[11px] text-slate-400 font-mono">
-              Adjust environmental stress variables to forecast impact and emergency threshold triggers
+              Adjust environmental stress variables to forecast impact and test threshold triggers
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function RiskSimulator({ zone, onSimulateAction }) {
           className="flex items-center gap-1.5 px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-mono rounded-lg border border-slate-700 transition-colors"
         >
           <RotateCcw className="h-3.5 w-3.5" />
-          <span>Reset to Telemetry Baseline</span>
+          <span>Reset to Baseline Values</span>
         </button>
       </div>
 
@@ -269,7 +269,7 @@ export default function RiskSimulator({ zone, onSimulateAction }) {
         </div>
       </div>
 
-      {/* Dynamic Authority Advisory Box */}
+      {/* Dynamic Mitigation Advisory Box */}
       <div className="bg-slate-950/90 p-4 rounded-xl border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-start gap-3">
           <ShieldAlert className={`h-5 w-5 shrink-0 mt-0.5 ${
@@ -277,7 +277,7 @@ export default function RiskSimulator({ zone, onSimulateAction }) {
           }`} />
           <div>
             <span className="text-xs font-mono font-bold text-white">
-              AUTOMATED MITIGATION ADVISORY:
+              SIMULATED MITIGATION ADVISORY:
             </span>
             <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">
               {getSimulatedAdvisory()}

@@ -15,10 +15,10 @@ export default function RecentAlertsList({ alerts, onNavigateToAlerts, onSelectA
             </div>
             <div>
               <h3 className="text-sm font-bold text-white font-display">
-                Real-Time Incident Stream
+                Simulated Incident Stream
               </h3>
               <p className="text-[11px] text-slate-400 font-mono">
-                Active alerts flagged by satellite anomaly triggers
+                Demo alerts based on synthetic anomaly triggers
               </p>
             </div>
           </div>
@@ -62,14 +62,14 @@ export default function RecentAlertsList({ alerts, onNavigateToAlerts, onSelectA
 
               <div className="mt-2 pt-2 border-t border-slate-900 flex items-center justify-between text-[10px] font-mono">
                 <span className="text-slate-500">
-                  Target Authority: <span className="text-slate-300">{alert.authorityAssigned}</span>
+                  Suggested Jurisdiction: <span className="text-slate-300">{alert.authorityAssigned}</span>
                 </span>
                 <span className={`px-1.5 py-0.5 rounded font-bold ${
                   alert.status === 'ACKNOWLEDGED' 
                     ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' 
                     : 'bg-rose-950 text-rose-400 border border-rose-800 animate-pulse'
                 }`}>
-                  {alert.status === 'ACKNOWLEDGED' ? 'ACKNOWLEDGED' : 'ACTION REQUIRED'}
+                  {alert.status === 'ACKNOWLEDGED' ? 'ACKNOWLEDGED' : 'REVIEW RECOMMENDED'}
                 </span>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function RecentAlertsList({ alerts, onNavigateToAlerts, onSelectA
           onClick={onNavigateToAlerts}
           className="w-full py-2 bg-slate-800/60 hover:bg-slate-800 text-xs font-semibold text-slate-300 hover:text-white rounded-xl border border-slate-700/60 transition-colors flex items-center justify-center gap-1.5"
         >
-          <span>Open Full Incident Response Console</span>
+          <span>Open Incident Response Console</span>
           <ArrowRight className="h-3.5 w-3.5" />
         </button>
       </div>

@@ -14,7 +14,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 88,
     severity: "CRITICAL",
     primaryHazard: "Ground Subsidence & Slope Destabilization",
-    satelliteSensor: "Sentinel-2 MSI + InSAR Telemetry",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-18 05:42 UTC",
     summary: "Extensive sub-surface displacement observed along lower slopes. Severe canopy thinning (-42%) and fresh linear road excavations compounding slope creep.",
     factors: {
@@ -35,17 +35,17 @@ export const HIMALAYAN_ZONES = [
     },
     beforeAfterData: {
       baselineDate: "Oct 2024 (Pre-Monsoon Baseline)",
-      telemetryDate: "May 2026 (Current Orbit Scan)",
+      telemetryDate: "May 2026 (Simulated Orbit Scan)",
       ndviChange: "-38.5%",
       soilMoistureChange: "+46.2%",
       slopeErosionVolume: "142,000 m³"
     },
-    recommendedAction: "Issue immediate Grade-A evacuation notice for Wards 4, 6, and 7; halt all heavy drilling on the Helang bypass corridor; reinforce toe support along the Alaknanda confluence.",
+    recommendedAction: "Suggested Grade-A evacuation review for Wards 4, 6, and 7; pause heavy drilling on the Helang bypass corridor; reinforce toe support along the Alaknanda confluence.",
     actionChecklist: [
-      { id: "act-1", title: "Deploy SDRF & Civil Evacuation Taskforce to Ward 5", priority: "IMMEDIATE_24H", status: "PENDING" },
-      { id: "act-2", title: "Order temporary suspension of heavy vehicular movement on NH-58", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
-      { id: "act-3", title: "Install 12 automated InSAR tiltmeters on destabilized toe slopes", priority: "MIDTERM_7D", status: "IN_PROGRESS" },
-      { id: "act-4", title: "Commission bio-engineering vetiver turfing & micro-drainage network", priority: "LONGTERM_30D", status: "PLANNED" }
+      { id: "act-1", title: "Deploy local survey & evacuation team to Ward 5", priority: "IMMEDIATE_24H", status: "PENDING" },
+      { id: "act-2", title: "Review temporary restriction of heavy vehicular movement on NH-58", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
+      { id: "act-3", title: "Simulate placement of automated tiltmeters on destabilized toe slopes", priority: "MIDTERM_7D", status: "IN_PROGRESS" },
+      { id: "act-4", title: "Plan bio-engineering vetiver turfing & micro-drainage network", priority: "LONGTERM_30D", status: "PLANNED" }
     ],
     historicalTrend: [
       { month: "Dec 2025", risk: 54, rainfall: 22, vegLoss: 14 },
@@ -66,7 +66,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 92,
     severity: "CRITICAL",
     primaryHazard: "GLOF (Glacial Lake Outburst) & Debris Flow",
-    satelliteSensor: "Landsat-9 OLI-2 + Sentinel-1 SAR",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-19 04:15 UTC",
     summary: "Chorabari moraine dam lake volume expanded by 34% following high spring melt. High slope debris mobility detected in upper Mandakini gully.",
     factors: {
@@ -87,15 +87,15 @@ export const HIMALAYAN_ZONES = [
     },
     beforeAfterData: {
       baselineDate: "Nov 2024 (Baseline)",
-      telemetryDate: "May 2026 (Current)",
+      telemetryDate: "May 2026 (Simulated)",
       ndviChange: "-28.2%",
       soilMoistureChange: "+58.0%",
       slopeErosionVolume: "260,000 m³"
     },
-    recommendedAction: "Trigger Level-3 flash flood alert across Gaurikund-Sonprayag corridor; mandate automated acoustic sensor sirens along the Mandakini river channel.",
+    recommendedAction: "Suggested Level-3 flash flood alert across Gaurikund-Sonprayag corridor; review acoustic sensor sirens along the Mandakini river channel.",
     actionChecklist: [
-      { id: "act-5", title: "Automated early warning sirens test in Gaurikund & Sonprayag", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
-      { id: "act-6", title: "Controlled siphon drainage installation on supra-glacial lake", priority: "MIDTERM_7D", status: "PLANNED" }
+      { id: "act-5", title: "Test simulated early warning siren triggers in Gaurikund & Sonprayag", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
+      { id: "act-6", title: "Evaluate siphon drainage on supra-glacial lake", priority: "MIDTERM_7D", status: "PLANNED" }
     ],
     historicalTrend: [
       { month: "Dec 2025", risk: 60, rainfall: 40, vegLoss: 10 },
@@ -116,7 +116,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 76,
     severity: "HIGH",
     primaryHazard: "Massive Rockslide & Silt Choking",
-    satelliteSensor: "Sentinel-2 MSI",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-17 06:10 UTC",
     summary: "Active scar progression detected on northern amphitheater wall. Hydro-power intake tunnels showing sediment overload alerts.",
     factors: {
@@ -142,10 +142,10 @@ export const HIMALAYAN_ZONES = [
       soilMoistureChange: "+32.1%",
       slopeErosionVolume: "185,000 m³"
     },
-    recommendedAction: "Pre-position excavators at bridge bottlenecks; restrict night transit along Joshimath-Malari strategic road.",
+    recommendedAction: "Pre-position excavators at bridge bottlenecks; review night transit advisories along Joshimath-Malari road.",
     actionChecklist: [
-      { id: "act-7", title: "Establish 24/7 geotechnical river gauge checkpoint at Tapovan", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
-      { id: "act-8", title: "Drone LiDAR volumetric scan of northern scarp face", priority: "MIDTERM_7D", status: "IN_PROGRESS" }
+      { id: "act-7", title: "Establish river gauge checkpoint at Tapovan", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
+      { id: "act-8", title: "Volumetric scan of northern scarp face", priority: "MIDTERM_7D", status: "IN_PROGRESS" }
     ],
     historicalTrend: [
       { month: "Dec 2025", risk: 48, rainfall: 18, vegLoss: 12 },
@@ -166,7 +166,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 68,
     severity: "HIGH",
     primaryHazard: "Slope Creep & Multi-Storey Overburden Collapse",
-    satelliteSensor: "Sentinel-2 MSI",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-18 07:30 UTC",
     summary: "Significant hill-cutting on Khanyara road; localized shear cracks observed near Bhagsu waterfall tourist sector.",
     factors: {
@@ -192,10 +192,10 @@ export const HIMALAYAN_ZONES = [
       soilMoistureChange: "+38.4%",
       slopeErosionVolume: "95,000 m³"
     },
-    recommendedAction: "Enforce blanket ban on hill-slope excavations exceeding 4 meters without RCC retaining walls; clear drainage gullies before monsoon surge.",
+    recommendedAction: "Advise strict controls on hill-slope excavations exceeding 4 meters without retaining walls; clear drainage gullies before monsoon surge.",
     actionChecklist: [
-      { id: "act-9", title: "Municipal inspection of 18 high-rise hotels in Bhagsu zone", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
-      { id: "act-10", title: "Construct cascading stormwater culverts along Jogibara Road", priority: "MIDTERM_7D", status: "PLANNED" }
+      { id: "act-9", title: "Inspection of high-slope structures in Bhagsu zone", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
+      { id: "act-10", title: "Construct stormwater culverts along Jogibara Road", priority: "MIDTERM_7D", status: "PLANNED" }
     ],
     historicalTrend: [
       { month: "Dec 2025", risk: 42, rainfall: 28, vegLoss: 10 },
@@ -216,7 +216,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 44,
     severity: "MODERATE",
     primaryHazard: "Permafrost Degradation & Soil Fragility",
-    satelliteSensor: "Landsat-9 OLI-2",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-16 04:50 UTC",
     summary: "Cold desert ecosystem showing localized gravel loss due to unregulated vehicular tracks on fragile alpine pastures near Kaza.",
     factors: {
@@ -265,7 +265,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 84,
     severity: "CRITICAL",
     primaryHazard: "Rapid Glacier Snout Retreat & Moraine Collapse",
-    satelliteSensor: "Sentinel-2 MSI + Landsat-9",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-18 03:55 UTC",
     summary: "Gaumukh snout calving accelerated by 24% compared to 2024 baseline. Moraine lateral collapse threatening pilgrimage trekking route.",
     factors: {
@@ -291,10 +291,10 @@ export const HIMALAYAN_ZONES = [
       soilMoistureChange: "+49.0%",
       slopeErosionVolume: "310,000 m³"
     },
-    recommendedAction: "Limit daily Gaumukh trekking permits to 75; deploy real-time acoustic avalanche sensors near Chirbasa cliff.",
+    recommendedAction: "Suggest permit quota limits for Gaumukh trekking; review acoustic sensor monitors near Chirbasa cliff.",
     actionChecklist: [
       { id: "act-12", title: "Implement online permit quota control with biometric tracking", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
-      { id: "act-13", title: "Emergency glaciological inspection team deployment", priority: "MIDTERM_7D", status: "IN_PROGRESS" }
+      { id: "act-13", title: "Glaciological inspection team deployment", priority: "MIDTERM_7D", status: "IN_PROGRESS" }
     ],
     historicalTrend: [
       { month: "Dec 2025", risk: 52, rainfall: 15, vegLoss: 8 },
@@ -315,7 +315,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 89,
     severity: "CRITICAL",
     primaryHazard: "High-Altitude Glacial Lake Breach & Riverbed Scour",
-    satelliteSensor: "Sentinel-2 MSI + RISAT-1A SAR",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-19 02:40 UTC",
     summary: "South Lhonak and Shako Cho glacial lakes showing elevated water level pressure. Heavy riverbank scouring along Chungthang axis.",
     factors: {
@@ -341,10 +341,10 @@ export const HIMALAYAN_ZONES = [
       soilMoistureChange: "+54.5%",
       slopeErosionVolume: "420,000 m³"
     },
-    recommendedAction: "Alert downstream hydro-electric barrage authorities; execute automated spillway gate readiness drills.",
+    recommendedAction: "Alert downstream barrage operators; execute spillway gate readiness reviews.",
     actionChecklist: [
-      { id: "act-14", title: "Mandatory early warning telemetry synchronization with NHPC & SDMA", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
-      { id: "act-15", title: "Reinforce Chungthang bailey bridge retaining abutments", priority: "MIDTERM_7D", status: "IN_PROGRESS" }
+      { id: "act-14", title: "Early warning telemetry check with simulated river gauges", priority: "IMMEDIATE_24H", status: "ACKNOWLEDGED" },
+      { id: "act-15", title: "Reinforce Chungthang bridge retaining abutments", priority: "MIDTERM_7D", status: "IN_PROGRESS" }
     ],
     historicalTrend: [
       { month: "Dec 2025", risk: 58, rainfall: 30, vegLoss: 18 },
@@ -365,7 +365,7 @@ export const HIMALAYAN_ZONES = [
     riskScore: 64,
     severity: "HIGH",
     primaryHazard: "Alluvial Fan Flash Flooding & Silt Washout",
-    satelliteSensor: "Landsat-9 OLI-2",
+    satelliteSensor: "Demo Sentinel/Landsat-compatible imagery",
     lastAcquisition: "2026-05-17 08:20 UTC",
     summary: "Urban building encroachment across traditional Khakshal mudflow channels creates high vulnerability in event of high-intensity short-duration downpours.",
     factors: {
@@ -391,10 +391,10 @@ export const HIMALAYAN_ZONES = [
       soilMoistureChange: "+22.0%",
       slopeErosionVolume: "54,000 m³"
     },
-    recommendedAction: "Clear choked culverts on Saboo & Choglamsar drainage paths; prohibit permanent masonry on active alluvial wash corridors.",
+    recommendedAction: "Clear choked culverts on Saboo & Choglamsar drainage paths; suggest restriction on permanent masonry on active wash corridors.",
     actionChecklist: [
       { id: "act-16", title: "Heavy desiltation of 6 main Saboo nallah runoff channels", priority: "IMMEDIATE_24H", status: "PENDING" },
-      { id: "act-17", title: "Issue GIS demarcation map for flood hazard no-build zones", priority: "MIDTERM_7D", status: "ACKNOWLEDGED" }
+      { id: "act-17", title: "Issue demarcation map for flood hazard no-build zones", priority: "MIDTERM_7D", status: "ACKNOWLEDGED" }
     ],
     historicalTrend: [
       { month: "Dec 2025", risk: 36, rainfall: 4, vegLoss: 8 },
@@ -416,7 +416,7 @@ export const SYSTEM_METRICS = {
   averageRegionalRiskScore: Math.round(
     HIMALAYAN_ZONES.reduce((acc, z) => acc + z.riskScore, 0) / HIMALAYAN_ZONES.length
   ),
-  satelliteConstellationStatus: "OPTIMAL (Sentinel-2A/B, Landsat-9, RISAT-1A synced)",
+  satelliteConstellationStatus: "SIMULATED (Sentinel/Landsat-compatible prototype dataset)",
   lastTelemetrySync: "2026-05-19 14:38:20 IST",
   openAlertsCount: 18
 };

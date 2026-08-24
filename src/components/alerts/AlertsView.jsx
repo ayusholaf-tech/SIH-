@@ -55,10 +55,10 @@ export default function AlertsView({
             </div>
             <div>
               <h2 className="text-base font-bold text-white font-display">
-                Environmental Incident Response & Alert Registry
+                Environmental Incident & Alert Registry (Demo)
               </h2>
               <p className="text-xs text-slate-400 font-mono">
-                Real-time critical anomaly flags and prescribed authority mitigation directives
+                Simulated critical anomaly flags and suggested mitigation actions
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function AlertsView({
                   {/* Recommended Action Box */}
                   <div className="p-3 rounded-xl bg-cyan-950/20 border border-cyan-500/30 text-xs">
                     <div className="text-cyan-400 font-mono font-bold uppercase text-[10px] mb-0.5">
-                      Recommended Mitigation Directive:
+                      Suggested Mitigation Response:
                     </div>
                     <p className="text-slate-300">
                       {alert.recommendedAction}
@@ -198,7 +198,7 @@ export default function AlertsView({
                         ? 'bg-emerald-950 border border-emerald-500/40 text-emerald-400'
                         : 'bg-rose-950 border border-rose-500/40 text-rose-400 animate-pulse'
                     }`}>
-                      {alert.status === 'TEAM_DISPATCHED' ? 'TASKFORCE EN ROUTE' : alert.status === 'ACKNOWLEDGED' ? 'ACKNOWLEDGED' : 'ACTION REQUIRED'}
+                      {alert.status === 'TEAM_DISPATCHED' ? 'TASKFORCE EN ROUTE' : alert.status === 'ACKNOWLEDGED' ? 'ACKNOWLEDGED' : 'REVIEW RECOMMENDED'}
                     </span>
                   </div>
 

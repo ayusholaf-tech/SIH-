@@ -36,7 +36,7 @@ export default function App() {
     }));
   };
 
-  const unreadAlertsCount = alerts.filter(a => a.status === 'PENDING_ACK' || a.status === 'ACTION REQUIRED').length;
+  const unreadAlertsCount = alerts.filter(a => a.status === 'PENDING_ACK' || a.status === 'REVIEW_RECOMMENDED' || a.status === 'REVIEW RECOMMENDED').length;
 
   return (
     <div className="min-h-screen flex flex-col bg-[#070b12] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">

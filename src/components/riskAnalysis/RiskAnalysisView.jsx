@@ -186,7 +186,7 @@ export default function RiskAnalysisView({ activeZone, onSelectZone }) {
             </span>
           </div>
           <span className="text-[11px] text-slate-500">
-            Source: IMD Automated Weather Stations + ISRO SAR
+            Source: Simulated prototype dataset
           </span>
         </div>
       </div>

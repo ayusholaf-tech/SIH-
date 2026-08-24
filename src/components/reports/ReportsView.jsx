@@ -44,10 +44,10 @@ export default function ReportsView({ activeZone, onSelectZone }) {
             </div>
             <div>
               <h2 className="text-base font-bold text-white font-display">
-                Official Environmental Intelligence Dossier Generator
+                Demo Environmental Monitoring Report Generator
               </h2>
               <p className="text-xs text-slate-400 font-mono">
-                Automated multi-spectral audit synthesis for NDMA, State Disaster Management Authorities & Ministry
+                Automated multi-spectral audit synthesis prototype for simulated disaster management workflows
               </p>
             </div>
           </div>
@@ -62,12 +62,12 @@ export default function ReportsView({ activeZone, onSelectZone }) {
           {isGenerating ? (
             <>
               <div className="h-4 w-4 rounded-full border-2 border-white border-t-transparent animate-spin" />
-              <span>Synthesizing Dossier...</span>
+              <span>Synthesizing Report...</span>
             </>
           ) : (
             <>
               <Sparkles className="h-4 w-4" />
-              <span>Generate Official Report (PDF)</span>
+              <span>Generate Demo Report (PDF)</span>
             </>
           )}
         </button>
@@ -175,13 +175,13 @@ export default function ReportsView({ activeZone, onSelectZone }) {
           <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5 backdrop-blur-md shadow-xl space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-800">
               <span className="font-mono text-xs font-bold text-cyan-400 uppercase">
-                3. PRESCRIBED MITIGATION & ADMINISTRATIVE MANDATE
+                3. SUGGESTED MITIGATION & RESPONSE PLAN
               </span>
             </div>
 
             <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-500/30 text-xs">
               <span className="font-mono font-bold text-cyan-300 uppercase block mb-1">
-                Executive Action Directive:
+                Suggested Action Plan:
               </span>
               <p className="text-slate-200 leading-relaxed font-sans">
                 {zone.recommendedAction}
@@ -210,26 +210,26 @@ export default function ReportsView({ activeZone, onSelectZone }) {
             <div className="flex items-center gap-2 pb-3 border-b border-slate-800">
               <Sparkles className="h-4 w-4 text-cyan-400" />
               <h3 className="text-sm font-bold text-white font-display">
-                Dossier Output Specifications
+                Report Output Specifications (Demo)
               </h3>
             </div>
 
             <div className="space-y-3 text-xs font-mono">
               <div className="flex items-center justify-between p-2 rounded bg-slate-950 border border-slate-800">
                 <span className="text-slate-500">Document Type:</span>
-                <span className="text-white font-semibold">NDMA Grade-1 Report</span>
+                <span className="text-white font-semibold">Demo Monitoring Report</span>
               </div>
               <div className="flex items-center justify-between p-2 rounded bg-slate-950 border border-slate-800">
                 <span className="text-slate-500">Format:</span>
                 <span className="text-cyan-400 font-semibold">Printable PDF / HTML</span>
               </div>
               <div className="flex items-center justify-between p-2 rounded bg-slate-950 border border-slate-800">
-                <span className="text-slate-500">Target Authority:</span>
-                <span className="text-white font-semibold">{zone.state} SDMA</span>
+                <span className="text-slate-500">Simulated Jurisdiction:</span>
+                <span className="text-white font-semibold">{zone.state} SDMA (Simulated)</span>
               </div>
               <div className="flex items-center justify-between p-2 rounded bg-slate-950 border border-slate-800">
                 <span className="text-slate-500">Classification:</span>
-                <span className="text-rose-400 font-bold">RESTRICTED</span>
+                <span className="text-rose-400 font-bold">PROTOTYPE ONLY</span>
               </div>
             </div>
 
@@ -239,7 +239,7 @@ export default function ReportsView({ activeZone, onSelectZone }) {
                 className="w-full py-3 bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 text-white text-xs font-bold font-mono rounded-xl shadow-lg shadow-cyan-950 flex items-center justify-center gap-2 transition-all"
               >
                 <Eye className="h-4 w-4" />
-                <span>Open Full Intelligence Dossier</span>
+                <span>Open Demo Monitoring Report</span>
               </button>
 
               <button
@@ -258,20 +258,20 @@ export default function ReportsView({ activeZone, onSelectZone }) {
           {/* Environmental Indicators Radar Snapshot Card */}
           <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5 backdrop-blur-md shadow-xl text-xs font-mono space-y-3">
             <span className="text-slate-400 font-bold block pb-2 border-b border-slate-800">
-              AUDIT COMPLIANCE STATUS
+              AUDIT COMPLIANCE STATUS (SIMULATED)
             </span>
             <div className="space-y-2">
               <div className="flex items-center justify-between text-slate-300">
                 <span>InSAR Tilt Analysis:</span>
-                <span className="text-emerald-400 font-bold">COMPLIANT</span>
+                <span className="text-emerald-400 font-bold">SIMULATED OK</span>
               </div>
               <div className="flex items-center justify-between text-slate-300">
-                <span>IMD Rainfall Gauge:</span>
-                <span className="text-emerald-400 font-bold">ACTIVE (148mm)</span>
+                <span>Rainfall Gauge:</span>
+                <span className="text-emerald-400 font-bold">SIMULATED (148mm)</span>
               </div>
               <div className="flex items-center justify-between text-slate-300">
                 <span>Geological Fault Creep:</span>
-                <span className="text-amber-400 font-bold">MONITORED</span>
+                <span className="text-amber-400 font-bold">SIMULATED</span>
               </div>
             </div>
           </div>

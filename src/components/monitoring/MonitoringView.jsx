@@ -37,7 +37,7 @@ export default function MonitoringView({ activeZone, onSelectZone, onNavigateToR
                 Satellite Change Detection Inspector
               </h2>
               <p className="text-xs text-slate-400 font-mono">
-                Multispectral differential analytics: Pre-disturbance baseline vs present orbit
+                Demo multispectral differential analytics: Pre-disturbance baseline vs simulated orbit scan
               </p>
             </div>
           </div>

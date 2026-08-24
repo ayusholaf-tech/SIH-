@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center gap-4 text-[11px]">
           <span className="flex items-center gap-1 text-emerald-400">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            ISRO BHUVAN / SENTINEL-2 LINK: ACTIVE
+            SIMULATED SATELLITE TELEMETRY PIPELINE
           </span>
           <span className="text-slate-600">•</span>
           <span>GIS ENGINE: LEAFLET / WGS84</span>

@@ -44,7 +44,7 @@ export default function SatelliteComparisonSlider({
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 font-mono text-xs text-cyan-400">
             <Compass className="h-4 w-4" />
-            <span className="font-bold">SENTINEL-2 MULTISPECTRAL COMPARATOR</span>
+            <span className="font-bold">DEMO MULTISPECTRAL COMPARATOR</span>
           </div>
           <span className="text-slate-600">|</span>
           <span className="text-xs font-mono text-slate-400">
@@ -187,7 +187,7 @@ export default function SatelliteComparisonSlider({
 
           {/* After Label Badge */}
           <div className="absolute top-4 left-4 bg-slate-950/90 border border-rose-500/50 text-rose-400 px-3 py-1.5 rounded-lg text-xs font-mono shadow-xl backdrop-blur-md">
-            <span className="font-bold">ORBIT SCAN:</span> {zone.beforeAfterData.telemetryDate}
+            <span className="font-bold">SIMULATED SCAN:</span> {zone.beforeAfterData.telemetryDate}
             <div className="text-[10px] text-rose-300 font-semibold">
               Canopy Loss: {zone.beforeAfterData.ndviChange} • Scars Active
             </div>

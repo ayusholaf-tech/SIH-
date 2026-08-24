@@ -24,7 +24,7 @@ export default function Sidebar({ activeTab, onSelectTab, alertsCount = 0 }) {
       id: 'monitoring',
       label: 'Satellite Monitoring',
       icon: Satellite,
-      badge: 'LIVE',
+      badge: 'DEMO',
       badgeColor: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
       description: 'Before/After & Change Detection'
     },
@@ -42,15 +42,15 @@ export default function Sidebar({ activeTab, onSelectTab, alertsCount = 0 }) {
       icon: BellRing,
       badge: alertsCount > 0 ? `${alertsCount} ACTIVE` : null,
       badgeColor: 'bg-rose-500/20 text-rose-400 border-rose-500/30 animate-pulse',
-      description: 'Hazard Logs & Directives'
+      description: 'Hazard Logs & Suggested Actions'
     },
     {
       id: 'reports',
-      label: 'Official Reports',
+      label: 'Monitoring Reports',
       icon: FileText,
-      badge: 'PDF / DOSSIER',
+      badge: 'DEMO PDF',
       badgeColor: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
-      description: 'Intelligence Generator'
+      description: 'Report Generator'
     }
   ];
 
@@ -107,7 +107,7 @@ export default function Sidebar({ activeTab, onSelectTab, alertsCount = 0 }) {
         <div className="flex items-center gap-2">
           <div className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
           <span className="text-[10px] font-mono text-slate-400 font-bold uppercase tracking-wider">
-            SYSTEM NODE: NDMA-ISRO LINK
+            SYSTEM NODE: PROTOTYPE DATA PIPELINE
           </span>
         </div>
         <p className="text-[11px] text-slate-400 mt-1 leading-relaxed">

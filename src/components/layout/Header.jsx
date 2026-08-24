@@ -49,16 +49,16 @@ export default function Header({ activeZone, onSelectZone, onNavigateToAlerts, u
                 HIM<span className="text-cyan-400">-SAFE</span>
               </span>
               <span className="bg-slate-800/90 border border-slate-700 text-cyan-300 font-mono text-[10px] px-1.5 py-0.5 rounded uppercase font-semibold">
-                GOV COMMAND
+                DEMO COMMAND
               </span>
             </div>
             <p className="text-[11px] text-slate-400 hidden sm:block tracking-tight">
-              Himalayan Environmental Impact Monitoring & Early Warning System
+              Himalayan Environmental Impact Monitoring (Prototype Concept)
             </p>
           </div>
         </div>
 
-        {/* Center: Live Sector Switcher */}
+        {/* Center: Sector Switcher */}
         <div className="hidden lg:flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-lg px-3 py-1.5 shadow-inner">
           <Globe className="h-4 w-4 text-cyan-400" />
           <span className="text-xs text-slate-400 font-mono">SECTOR FOCUS:</span>
@@ -92,8 +92,7 @@ export default function Header({ activeZone, onSelectZone, onNavigateToAlerts, u
           {/* Satellite Telemetry Sync Pill */}
           <div className="hidden sm:flex items-center gap-2 bg-emerald-950/40 border border-emerald-500/30 px-2.5 py-1 rounded-full text-xs text-emerald-400 font-mono">
             <Satellite className="h-3.5 w-3.5 animate-pulse text-emerald-400" />
-            <span className="hidden xl:inline text-[11px]">SENTINEL-2 / ISRO PASS:</span>
-            <span className="font-bold text-[11px]">SYNCED</span>
+            <span className="font-bold text-[11px]">DEMO DATASET: SIMULATED SATELLITE ANALYSIS</span>
           </div>
 
           {/* Alert Trigger Button */}

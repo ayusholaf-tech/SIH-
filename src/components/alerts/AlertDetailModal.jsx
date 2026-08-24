@@ -46,7 +46,7 @@ export default function AlertDetailModal({ alert, onClose, onAcknowledgeAlert, o
                 <RiskBadge severity={alert.severity} score={alert.riskScore} size="sm" />
               </div>
               <h3 className="text-base font-bold text-white font-display mt-0.5">
-                Incident Response Directive
+                Suggested Incident Response
               </h3>
             </div>
           </div>
@@ -86,24 +86,24 @@ export default function AlertDetailModal({ alert, onClose, onAcknowledgeAlert, o
             </p>
           </div>
 
-          {/* Recommended Authority Action */}
+          {/* Recommended Action */}
           <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-500/30">
             <span className="text-xs font-mono uppercase text-cyan-400 font-bold flex items-center gap-1.5">
               <FileCheck className="h-4 w-4" />
-              Prescribed NDMA / SDMA Mitigation Action
+              Suggested Mitigation Action
             </span>
             <p className="text-sm text-slate-200 mt-1 leading-relaxed">
               {alert.recommendedAction}
             </p>
             <div className="mt-2 text-[11px] font-mono text-slate-400">
-              Assigned Jurisdiction: <strong className="text-white">{alert.authorityAssigned}</strong>
+              Suggested Jurisdiction: <strong className="text-white">{alert.authorityAssigned}</strong>
             </div>
           </div>
 
           {/* Incident Response Workflow Actions */}
           <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-3">
             <span className="text-xs font-mono uppercase text-slate-300 font-bold">
-              AUTHORITY ACTION CONSOLE:
+              RESPONSE WORKFLOW CONSOLE (DEMO):
             </span>
 
             <div className="flex flex-wrap gap-2">
@@ -117,7 +117,7 @@ export default function AlertDetailModal({ alert, onClose, onAcknowledgeAlert, o
                 }`}
               >
                 <CheckCircle2 className="h-4 w-4" />
-                <span>{taskStatus === 'ACKNOWLEDGED' || taskStatus === 'TEAM_DISPATCHED' ? 'DIRECTIVE ACKNOWLEDGED' : 'ACKNOWLEDGE ALERT'}</span>
+                <span>{taskStatus === 'ACKNOWLEDGED' || taskStatus === 'TEAM_DISPATCHED' ? 'ALERT ACKNOWLEDGED' : 'ACKNOWLEDGE ALERT'}</span>
               </button>
 
               <button
@@ -125,14 +125,14 @@ export default function AlertDetailModal({ alert, onClose, onAcknowledgeAlert, o
                 className="flex-1 py-2 px-3 rounded-xl text-xs font-semibold font-mono flex items-center justify-center gap-2 bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-500 hover:to-rose-400 text-white border border-rose-500/40 shadow-lg shadow-rose-950 transition-all"
               >
                 <Send className="h-4 w-4" />
-                <span>{isDispatched ? 'TASKFORCE DISPATCHED' : 'DISPATCH SDRF TASKFORCE'}</span>
+                <span>{isDispatched ? 'TASKFORCE DISPATCHED' : 'SIMULATE TASKFORCE DISPATCH'}</span>
               </button>
             </div>
 
             {isDispatched && (
               <div className="p-2.5 bg-emerald-950/40 border border-emerald-500/30 rounded-lg text-xs font-mono text-emerald-300 flex items-center gap-2 animate-in fade-in">
                 <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                <span>Emergency taskforce mobilization order broadcasted to regional control room.</span>
+                <span>Simulated dispatch status recorded in prototype demo console.</span>
               </div>
             )}
           </div>
@@ -140,7 +140,7 @@ export default function AlertDetailModal({ alert, onClose, onAcknowledgeAlert, o
 
         {/* Modal Footer */}
         <div className="bg-slate-950 border-t border-slate-800 px-6 py-3 flex items-center justify-between text-xs font-mono text-slate-500">
-          <span>SECURE TELEMETRY LOG ID: {alert.id}-VER-1</span>
+          <span>SIMULATED LOG ID: {alert.id}-DEMO</span>
           <button
             onClick={onClose}
             className="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg font-semibold transition-colors"

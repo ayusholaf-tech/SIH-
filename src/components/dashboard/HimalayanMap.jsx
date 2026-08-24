@@ -68,9 +68,9 @@ export default function HimalayanMap({ activeZone, onSelectZone, onNavigateToMon
       <div className="absolute top-3 left-3 right-3 z-[1000] flex flex-wrap items-center justify-between gap-2 pointer-events-none">
         <div className="flex items-center gap-2 bg-slate-950/90 backdrop-blur-md border border-slate-800 px-3 py-1.5 rounded-xl shadow-lg pointer-events-auto">
           <Layers className="h-4 w-4 text-cyan-400" />
-          <span className="text-xs font-mono font-bold text-slate-300">HIMALAYAN MONITORING GRID</span>
+          <span className="text-xs font-mono font-bold text-slate-300">HIMALAYAN DEMO MONITORING GRID</span>
           <span className="text-xs text-slate-500">|</span>
-          <span className="text-xs text-cyan-400 font-mono font-bold">{filteredZones.length} Active Hotspots</span>
+          <span className="text-xs text-cyan-400 font-mono font-bold">{filteredZones.length} Demo Hotspots</span>
         </div>
 
         {/* Severity Filters & Tile Switcher */}
@@ -249,7 +249,7 @@ export default function HimalayanMap({ activeZone, onSelectZone, onNavigateToMon
           </span>
         </div>
         <div className="text-[11px] text-slate-500 hidden sm:block">
-          COORDINATES: WGS84 / UTM ZONE 44N • SATELLITE CADENCE: 5 DAYS
+          COORDINATES: WGS84 / UTM ZONE 44N • DEMO REVISIT CADENCE: 5 DAYS
         </div>
       </div>
     </div>

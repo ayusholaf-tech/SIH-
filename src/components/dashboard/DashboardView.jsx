@@ -40,7 +40,7 @@ export default function DashboardView({
             </span>
           </div>
           <p className="text-xs text-slate-400 mt-1 font-mono">
-            Synchronized with ISRO Bhuvan / Sentinel Multispectral Feeds • Active Grid: Uttarakhand, Himachal, Sikkim, Ladakh
+            Simulated Himalayan environmental impact grid • Demonstration sectors: Uttarakhand, Himachal, Sikkim, Ladakh
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function DashboardView({
           unit="ZONES"
           subtitle="Risk index ≥ 80 / 100 threshold"
           icon={ShieldAlert}
-          trend="Immediate Action Required"
+          trend="Review Recommended"
           trendType="danger"
           alert={true}
         />
