@@ -1,0 +1,141 @@
+/**
+ * Mock Telemetry, Alert Logs and Sensor Specifications for HIM-SAFE
+ */
+
+export const INITIAL_ALERTS = [
+  {
+    id: "ALT-2026-0941",
+    timestamp: "10 mins ago",
+    dateFormatted: "2026-05-19 14:35 IST",
+    zoneId: "zone-kedarnath",
+    location: "Kedarnath Mandakini Basin",
+    coordinates: "30.7346° N, 79.0669° E",
+    state: "Uttarakhand",
+    severity: "CRITICAL",
+    riskScore: 92,
+    detectedChange: "Chorabari moraine lake volume surge (+34%) & upper gully debris mobilization",
+    recommendedAction: "Trigger Level-3 flash flood alert across Gaurikund-Sonprayag corridor; mandate automated acoustic sensor sirens along the Mandakini river channel.",
+    authorityAssigned: "NDMA / Uttarakhand SDMA",
+    status: "PENDING_ACK",
+    sensorSource: "Sentinel-1 SAR / Sentinel-2 MSI"
+  },
+  {
+    id: "ALT-2026-0938",
+    timestamp: "42 mins ago",
+    dateFormatted: "2026-05-19 14:02 IST",
+    zoneId: "zone-teesta",
+    location: "Teesta North Sikkim GLOF Flashpoint",
+    coordinates: "27.5330° N, 88.5122° E",
+    state: "Sikkim",
+    severity: "CRITICAL",
+    riskScore: 89,
+    detectedChange: "South Lhonak moraine ridge micro-fissure expansion (5.8 mm/day displacement rate)",
+    recommendedAction: "Alert downstream hydro-electric barrage authorities; execute automated spillway gate readiness drills.",
+    authorityAssigned: "Sikkim SDMA & Central Water Commission",
+    status: "IN_PROGRESS",
+    sensorSource: "RISAT-1A SAR + Sentinel-2"
+  },
+  {
+    id: "ALT-2026-0932",
+    timestamp: "1 hr ago",
+    dateFormatted: "2026-05-19 13:40 IST",
+    zoneId: "zone-joshimath",
+    location: "Joshimath Subsidence Corridor",
+    coordinates: "30.5562° N, 79.5637° E",
+    state: "Uttarakhand",
+    severity: "CRITICAL",
+    riskScore: 88,
+    detectedChange: "Rapid sub-surface displacement in Ward 5 & vegetative canopy loss of 42%",
+    recommendedAction: "Issue immediate Grade-A evacuation notice for Wards 4, 6, and 7; halt all heavy drilling on the Helang bypass corridor.",
+    authorityAssigned: "Chamoli District Disaster Mgmt Authority",
+    status: "ACKNOWLEDGED",
+    sensorSource: "InSAR Ground Telemetry"
+  },
+  {
+    id: "ALT-2026-0925",
+    timestamp: "3 hrs ago",
+    dateFormatted: "2026-05-19 11:25 IST",
+    zoneId: "zone-gangotri",
+    location: "Gangotri Glacier Snout",
+    coordinates: "30.9947° N, 78.9398° E",
+    state: "Uttarakhand",
+    severity: "CRITICAL",
+    riskScore: 84,
+    detectedChange: "Gaumukh snout calving acceleration + lateral moraine slip over pilgrimage trail",
+    recommendedAction: "Limit daily Gaumukh trekking permits to 75; deploy real-time acoustic avalanche sensors near Chirbasa cliff.",
+    authorityAssigned: "Uttarkashi Administration / IIRS Dehradun",
+    status: "ACKNOWLEDGED",
+    sensorSource: "Landsat-9 OLI-2"
+  },
+  {
+    id: "ALT-2026-0919",
+    timestamp: "5 hrs ago",
+    dateFormatted: "2026-05-19 09:12 IST",
+    zoneId: "zone-chamoli",
+    location: "Chamoli - Rishiganga Gash Basin",
+    coordinates: "30.4124° N, 79.3326° E",
+    state: "Uttarakhand",
+    severity: "HIGH",
+    riskScore: 76,
+    detectedChange: "Active rock scarp progression and 11.2 km road-widening excavation debris overloading riverbanks",
+    recommendedAction: "Pre-position excavators at bridge bottlenecks; restrict night transit along Joshimath-Malari strategic road.",
+    authorityAssigned: "Border Roads Organisation & SDRF",
+    status: "ACKNOWLEDGED",
+    sensorSource: "Sentinel-2 MSI"
+  },
+  {
+    id: "ALT-2026-0912",
+    timestamp: "8 hrs ago",
+    dateFormatted: "2026-05-19 06:45 IST",
+    zoneId: "zone-dharamshala",
+    location: "Dharamshala - McLeod Ganj Ridge Sector",
+    coordinates: "32.2190° N, 76.3234° E",
+    state: "Himachal Pradesh",
+    severity: "HIGH",
+    riskScore: 68,
+    detectedChange: "Hill-cutting overburden and unchanneled stormwater saturation near Bhagsu cliffline",
+    recommendedAction: "Enforce blanket ban on hill-slope excavations exceeding 4 meters without RCC retaining walls; clear drainage gullies before monsoon surge.",
+    authorityAssigned: "Kangra District Administration",
+    status: "RESOLVED",
+    sensorSource: "Sentinel-2 MSI"
+  },
+  {
+    id: "ALT-2026-0899",
+    timestamp: "14 hrs ago",
+    dateFormatted: "2026-05-19 00:30 IST",
+    zoneId: "zone-leh",
+    location: "Leh Valley Alluvial Fan",
+    coordinates: "34.1526° N, 77.5771° E",
+    state: "Ladakh UT",
+    severity: "HIGH",
+    riskScore: 64,
+    detectedChange: "Runoff channel siltation and infrastructure encroachment across Khakshal alluvial fan",
+    recommendedAction: "Clear choked culverts on Saboo & Choglamsar drainage paths; prohibit permanent masonry on active alluvial wash corridors.",
+    authorityAssigned: "Ladakh Disaster Management Authority",
+    status: "ACKNOWLEDGED",
+    sensorSource: "Landsat-9 OLI-2"
+  },
+  {
+    id: "ALT-2026-0881",
+    timestamp: "1 day ago",
+    dateFormatted: "2026-05-18 16:15 IST",
+    zoneId: "zone-spiti",
+    location: "Spiti Valley High-Altitude Zone",
+    coordinates: "32.2461° N, 78.0349° E",
+    state: "Himachal Pradesh",
+    severity: "MODERATE",
+    riskScore: 44,
+    detectedChange: "Vegetation cover thinning across 1.2 sq km fragile alpine grassland due to off-road tracks",
+    recommendedAction: "Designate protected alpine conservation corridors; ban non-designated off-road vehicular excursions.",
+    authorityAssigned: "HP Forest Dept / Kaza Sub-Divisional Magistrate",
+    status: "ACKNOWLEDGED",
+    sensorSource: "Landsat-9 OLI-2"
+  }
+];
+
+export const SATELLITE_ORBIT_DATA = [
+  { name: "Sentinel-2A MSI", orbit: "Sun-synchronous 786 km", swath: "290 km", nextPass: "In 44 mins", sensorHealth: "100% OPERATIONAL" },
+  { name: "Sentinel-1C SAR", orbit: "Polar 693 km", swath: "250 km (C-Band)", nextPass: "In 2 hrs 18m", sensorHealth: "OPTIMAL" },
+  { name: "Landsat-9 OLI-2/TIRS", orbit: "Sun-synchronous 705 km", swath: "185 km", nextPass: "In 4 hrs 05m", sensorHealth: "100% OPERATIONAL" },
+  { name: "ISRO EOS-04 (RISAT-1A)", orbit: "Sun-synchronous 536 km", swath: "C-band Polarimetric", nextPass: "In 1 hr 12m", sensorHealth: "ACTIVE" }
+];
