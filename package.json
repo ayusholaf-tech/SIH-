@@ -1,0 +1,11 @@
+{
+  "name": "him-safe-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HIM-SAFE: Himalayan Environmental Impact Monitoring Prototype (SIH 2026)",
+  "scripts": {
+    "dev": "npm --prefix \"HIM safe1\" run dev",
+    "build": "npm --prefix \"HIM safe1\" run build",
+    "preview": "npm --prefix \"HIM safe1\" run preview"
+  }
+}
